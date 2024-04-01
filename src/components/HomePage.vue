@@ -36,12 +36,14 @@ const heroBackgroundStyle = ref({
   background:
     'url("https://theluzonian.press/wp-content/uploads/2024/01/cropped-Transparent-Logo.png")',
   display: "block",
+  href: "",
 });
 
 const heroTitleStyle = ref({
   position: "absolute",
   background:
     "linear-gradient(0deg, rgba(0,0,0,1) 5%, rgba(255,255,255,0) 100%)",
+    
 });
 
 const parseDate = (date: any) => {
@@ -108,38 +110,44 @@ const decodedText = (dataText: string) => {
 };
 </script>
 
-
 <template>
   <section v-if="post.post">
+    <a :href="post.post.link" style="text-decoration: none; color: inherit;">
+
     <div style="position: relative">
       <div class="hero-background" :style="heroBackgroundStyle"></div>
       <div class="hero-title text-white" :style="heroTitleStyle">
-        <img
-          class="logo"
-          src="https://theluzonian.press/wp-content/uploads/2024/01/3Asset-16DAEL-LOGO-.png"
-          alt="dael_logo"
-        />
-        <div class="pt-8" style="max-width: 120rem">
-          <h3 class="hero-title-heading">
-            {{ decodedText(post.post.title.rendered) }}
-          </h3>
-          <p
-            class="text-body-1 pt-2"
-            style="
-              font-family: 'Geologica', sans-serif;
-              margin: auto;
-              width: 80vw;
-              padding-bottom: 40px;
-            "
-          >
-            <b>{{ decodedText(post.postAuthor) }}</b> |
-            {{ parseDate(post.post.date).value }}
-          </p>
-        </div>
+          <img
+            class="logo"
+            src="https://theluzonian.press/wp-content/uploads/2024/01/3Asset-16DAEL-LOGO-.png"
+            alt="dael_logo"
+          />
+          <div class="pt-8" style="max-width: 120rem">
+
+            <h3 class="hero-title-heading">
+              {{ decodedText(post.post.title.rendered) }}
+            </h3>
+           
+            <p
+              class="text-body-1 pt-2"
+              style="
+                font-family: 'Geologica', sans-serif;
+                margin: auto;
+                width: 80vw;
+                padding-bottom: 40px;
+              "
+            >
+              <b>{{ decodedText(post.postAuthor) }}</b> |
+              {{ parseDate(post.post.date).value }}
+            </p>
+          </div>
+        
       </div>
     </div>
+  </a>
   </section>
 </template>
+
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Geologica:wght@100;200;300;400;500;600;700;800;900&display=swap");
