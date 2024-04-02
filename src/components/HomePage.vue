@@ -14,7 +14,6 @@ interface Post {
 interface Author {
   id: number;
   name: string;
-  // Add other author properties as needed
 }
 
 interface Category {
@@ -33,8 +32,7 @@ const post = ref<{
 });
 
 const heroBackgroundStyle = ref({
-  background:
-    'url("https://theluzonian.press/wp-content/uploads/2024/01/cropped-Transparent-Logo.png")',
+  background: "white",
   display: "block",
   href: "",
 });
@@ -42,8 +40,7 @@ const heroBackgroundStyle = ref({
 const heroTitleStyle = ref({
   position: "absolute",
   background:
-    "linear-gradient(0deg, rgba(0,0,0,1) 5%, rgba(255,255,255,0) 100%)",
-    
+    "linear-gradient(0deg, rgba(0,0,0,1) 5%, rgba(255,255,255,0) 100%)",   
 });
 
 const parseDate = (date: any) => {
@@ -131,7 +128,7 @@ const decodedText = (dataText: string) => {
             <p
               class="text-body-1 pt-2"
               style="
-                font-family: 'Geologica', sans-serif;
+                font-family: sans-serif;
                 margin: auto;
                 width: 80vw;
                 padding-bottom: 40px;
@@ -150,7 +147,6 @@ const decodedText = (dataText: string) => {
 
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Geologica:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 .hero-background {
   min-height: 60vh;
@@ -162,7 +158,7 @@ const decodedText = (dataText: string) => {
 }
 
 .hero-title {
-  font-family: "Geologica-Regular", Helvetica, Arial, Lucida, sans-serif;
+  font-family: sans-serif;
   font-weight: bolder !important;
   color: "#fff";
   font-size: 3rem;
@@ -178,7 +174,7 @@ const decodedText = (dataText: string) => {
 }
 
 .hero-title-heading {
-  font-family: "Geologica-Regular", Helvetica, Arial, Lucida, sans-serif;
+  font-family: sans-serif;
   color: white;
   font-weight: bolder;
   font-size: 50px;
@@ -190,13 +186,14 @@ const decodedText = (dataText: string) => {
 .logo {
   max-width: 18rem;
   padding: 40px;
+
 }
 
 /* mobile phone */
 @media only screen and (max-width: 768px) {
   
   .hero-title-heading {
-    font-family: "Geologica-Regular", Helvetica, Arial, Lucida, sans-serif;
+    font-family: sans-serif;
     color: white;
     font-weight: bolder;
     font-size: 28px;
@@ -215,7 +212,7 @@ const decodedText = (dataText: string) => {
 /* tablet */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .hero-title-heading {
-    font-family: "Geologica-Regular", Helvetica, Arial, Lucida, sans-serif;
+    font-family: sans-serif;
     color: white;
     font-weight: bolder;
     font-size: 40px;
@@ -224,7 +221,6 @@ const decodedText = (dataText: string) => {
     width: 80vw;
     max-width: 1200px;
   }
-
 
   .logo {
     max-width: 16rem; 
