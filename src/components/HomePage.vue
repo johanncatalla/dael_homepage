@@ -153,7 +153,7 @@ const decodedText = (dataText: string) => {
   min-width: none;
   background-size: cover !important;
   z-index: -1;
-  background-position: 0% 15% !important;
+  background-position: 50% 40% !important;
   background-repeat: no-repeat !important;
 }
 
