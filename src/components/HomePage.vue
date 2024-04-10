@@ -132,6 +132,7 @@ const decodedText = (dataText: string) => {
                 margin: auto;
                 width: 80vw;
                 padding-bottom: 40px;
+                max-width: 1200px;
               "
             >
               <b>{{ decodedText(post.postAuthor) }}</b> |
